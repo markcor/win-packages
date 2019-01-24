@@ -14,3 +14,6 @@ class win_packages::process_debug {
 		destination => "C:\\ProcessMonitor",
 	}
 }
+
+# Bug List
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1520042

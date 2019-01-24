@@ -8,3 +8,6 @@ class win_packages::sevenzip {
 		install_options => ['/quiet'],
 	}
 }
+
+# Bug List
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1519249i

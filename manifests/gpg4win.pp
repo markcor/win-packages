@@ -8,3 +8,6 @@ class win_packages::gpg4win {
         install_options_string => "/S",
 	}
 }
+
+# Bug List 
+# 
