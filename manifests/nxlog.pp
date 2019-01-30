@@ -17,4 +17,8 @@ $programfilesx86 = $facts['programfilesx86']
 	file { "$programfilesx86\\nxlog\\conf\\nxlog.conf":
 		content => epp("win_packages/nxlog.conf.epp"),
 	}
+	service { "nxlog":
+		restart   => true,
+		subscribe => File["$programfilesx86\\nxlog\\conf\\nxlog.conf"],
+	}
 }

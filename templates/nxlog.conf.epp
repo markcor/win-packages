@@ -84,13 +84,13 @@ LogFile   %ROOT%\data\nxlog.log
   Exec $SourceName = 'generic-worker';
 </Input>
 
-<Input dsc_run_log>
+<Input puppet_run_log>
   Module im_file
-  File 'C:\log\\*dsc-run.log'
+  File 'C:\\ProgramData\\PuppetLabs\\puppet\\var\\log\\*puppetrun.log'
   SavePos TRUE
   ReadFromLast TRUE
   InputType LineBased
-  Exec $SourceName = 'dsc-run';
+  Exec $SourceName = 'puppet-run';
 </Input>
 
 <Input nxlog>
