@@ -16,7 +16,7 @@ $programfilesx86 = $facts['programfilesx86']
   		action       => 'allow',
   		enabled      => true,
   		protocol     => 'TCP',
-  		local_port   => 518,
+  		local_port   => 514,
   		display_name => 'Nxlog out',
   		description  => 'Nxlogout. [TCP 514]',
 	}
