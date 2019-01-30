@@ -19,7 +19,7 @@ $programfilesx86 = $facts['programfilesx86']
   		local_port   => 518,
   		display_name => 'Nxlog out',
   		description  => 'Nxlogout. [TCP 514]',
-	}	`
+	}
 	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
 		content => file("win_packages/papertrail-bundle.pem"),
 	}
