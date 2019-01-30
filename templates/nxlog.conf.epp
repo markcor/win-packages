@@ -139,8 +139,8 @@ LogFile   %ROOT%\data\nxlog.log
   Path generic_worker_service_log => <%= $facts[mozspace] %>_aggregator
 </Route>
 
-<Route dsc_run_log_<%= $facts[mozspace] %>_aggregator>
-  Path dsc_run_log => <%= $facts[mozspace] %>_aggregator
+<Route puppet_run_log_<%= $facts[mozspace] %>_aggregator>
+  Path puppet_run_log => <%= $facts[mozspace] %>_aggregator
 </Route>
 
 <Route nxlog_<%= $facts[mozspace] %>_aggregator>
