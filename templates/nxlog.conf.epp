@@ -96,7 +96,7 @@ LogFile   %ROOT%\data\nxlog.log
 
 <Output <%= $facts[mozspace] %>_aggregator>
   Module om_tcp
-  Host (<%= lookup(dc_log_aggregator) %>)
+  Host <%= lookup(dc_log_aggregator) %>
   Port 514
   Exec $Hostname = hostname_fqdn();
   Exec to_syslog_ietf();
