@@ -28,6 +28,6 @@ $programfilesx86 = $facts['programfilesx86']
 	}
 	service { "nxlog":
 		restart   => true,
-		subscribe => File["$programfilesx86\\nxlog\\conf\\nxlog.conf"],
+		subscribe => epp["$programfilesx86\\nxlog\\conf\\nxlog.conf"],
 	}
 }
