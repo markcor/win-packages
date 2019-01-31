@@ -6,20 +6,20 @@ class win_packages::nxlog {
 
 $programfilesx86 = $facts['programfilesx86']
 
-    defined_classes::pkg::win_msi_pkg  { "NxLog-CE":
-        pkg             => "nxlog-ce-2.8.1248.msi",
-        install_options => ['/quiet'],
-	}
-	windows_firewall::exception { 'nxlog':
-  		ensure       => present,
-  		direction    => 'out',
-  		action       => 'allow',
-  		enabled      => true,
-  		protocol     => 'TCP',
-  		local_port   => 514,
-  		display_name => 'Nxlog out',
-  		description  => 'Nxlogout. [TCP 514]',
-	}
+   # defined_classes::pkg::win_msi_pkg  { "NxLog-CE":
+    #    pkg             => "nxlog-ce-2.8.1248.msi",
+     #   install_options => ['/quiet'],
+	#}
+	#windows_firewall::exception { 'nxlog':
+  	#	ensure       => present,
+  	#	direction    => 'out',
+  	#	action       => 'allow',
+  	#	enabled      => true,
+  	#	protocol     => 'TCP',
+  	#	local_port   => 514,
+  	#	display_name => 'Nxlog out',
+  	#	description  => 'Nxlogout. [TCP 514]',
+	#}
 #	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
 #		content => file("win_packages/papertrail-bundle.pem"),
 #	}
