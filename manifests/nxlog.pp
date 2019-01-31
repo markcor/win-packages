@@ -20,9 +20,9 @@ $programfilesx86 = $facts['programfilesx86']
   		display_name => 'Nxlog out',
   		description  => 'Nxlogout. [TCP 514]',
 	}
-	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
-		content => file("win_packages/papertrail-bundle.pem"),
-	}
+#	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
+#		content => file("win_packages/papertrail-bundle.pem"),
+#	}
 	file { "$programfilesx86\\nxlog\\conf\\nxlog.conf":
 		content => epp("win_packages/nxlog.conf.epp"),
 	}
