@@ -32,3 +32,6 @@ $programfilesx86 = $facts['programfilesx86']
 		subscribe => File["$programfilesx86\\nxlog\\conf\\nxlog.conf"],
 	}
 }
+
+# Bug list 
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1520947
