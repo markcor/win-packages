@@ -110,10 +110,6 @@ LogFile   %ROOT%\data\nxlog.log
   Path eventlog_basic => <%= $facts[mozspace] %>_aggregator
 </Route>
 
-<Route eventlog_operational_<%= $facts[mozspace] %>_aggregator>
-  Path eventlog_operational => <%= $facts[mozspace] %>_aggregator
-</Route>
-
 <Route eventlog_audit_<%= $facts[mozspace] %>_aggregator>
   Path eventlog_audit => <%= $facts[mozspace] %>_aggregator
 </Route>
