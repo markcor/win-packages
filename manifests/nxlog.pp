@@ -17,7 +17,7 @@ $programfilesx86 = $facts['programfilesx86']
   		enabled      => true,
   		protocol     => 'TCP',
   		local_port   => 514,
-  		display_name => 'Nxlog out',
+  		display_name => 'papertrail 1',
   		description  => 'Nxlogout. [TCP 514]',
 	}
 	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
