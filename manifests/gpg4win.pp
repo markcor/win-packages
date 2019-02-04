@@ -4,8 +4,9 @@
 
 class win_packages::gpg4win {
     defined_classes::pkg::win_exe_pkg  { "gpg4win-2.3.0":
-        pkg             => "gpg4win-2.3.0.exe",
+        pkg                    => "gpg4win-2.3.0.exe",
         install_options_string => "/S",
+		creates                => "$facts['programfilesx86']\\GNU\\GnuPG\\bin\\kleopatra.exe",
 	}
 }
 
