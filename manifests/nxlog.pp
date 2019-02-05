@@ -4,7 +4,7 @@
 
 class win_packages::nxlog {
 
-${programfilesx86} = $facts['programfilesx86']
+$programfilesx86 = $facts['programfilesx86']
 
 	defined_classes::pkg::win_msi_pkg  { "NxLog-CE":
         pkg             => "nxlog-ce-2.10.2150.msi",
