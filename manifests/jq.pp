@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 class win_packages::jq {
-	file { "${facts['system32']}\\System32\\jq.exe":
+	file { "${facts['system32']}\\jq.exe":
 		ensure => present,
 		source => "https://s3.amazonaws.com/windows-opencloudconfig-packages/RoninPackages/jq-win64.exe",
 	}
