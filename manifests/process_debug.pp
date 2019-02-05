@@ -3,15 +3,16 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 class win_packages::process_debug {
+
 	defined_classes::pkg::win_zip_pkg { 'proc_expolorer':
 		pkg         => 'ProcessExplorer.zip',
-		creates     => "C:\\ProcessExplorer\\procexp.exe",
-		destination => "C:\\ProcessExplorer",
+		creates     => "${facts['systemdrive']}\\ProcessExplorer\\procexp.exe",
+		destination => "${facts['systemdrive']}\\ProcessExplorer",
 	}
 	defined_classes::pkg::win_zip_pkg { 'proc_monitor':
 		pkg         => 'ProcessMonitor.zip',
-		creates     => "C:\\ProcessMonitor\\Procmon.exe",
-		destination => "C:\\ProcessMonitor",
+		creates     => "${facts['systemdrive']}\\ProcessMonitor\\Procmon.exe",
+		destination => "${facts['systemdrive']}\\ProcessMonitor",
 	}
 }
 

@@ -4,7 +4,7 @@
 
 class win_packages::nxlog {
 
-$programfilesx86 = $facts['programfilesx86']
+${programfilesx86} = $facts['programfilesx86']
 
 	defined_classes::pkg::win_msi_pkg  { "NxLog-CE":
         pkg             => "nxlog-ce-2.10.2150.msi",
@@ -20,15 +20,15 @@ $programfilesx86 = $facts['programfilesx86']
   		display_name => 'papertrail 1',
   		description  => 'Nxlogout. [TCP 514]',
 	}
-	file { "$programfilesx86\\nxlog\\cert\\papertrail-bundle.pem":
+	file { "${programfilesx86}\\nxlog\\cert\\papertrail-bundle.pem":
 		content => file("win_packages/papertrail-bundle.pem"),
 	}
-	file { "$programfilesx86\\nxlog\\conf\\nxlog.conf":
+	file { "${programfilesx86}\\nxlog\\conf\\nxlog.conf":
 		content => epp("win_packages/nxlog.conf.epp"),
 	}
 	service { "nxlog":
 		ensure    => running,
-		subscribe => File["$programfilesx86\\nxlog\\conf\\nxlog.conf"],
+		subscribe => File["${programfilesx86}\\nxlog\\conf\\nxlog.conf"],
 		restart   => true,
 	}
 }
